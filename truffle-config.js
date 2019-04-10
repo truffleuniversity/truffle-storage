@@ -96,5 +96,5 @@ module.exports = {
       // }
     }
   },
-  contracts_build_directory: "./app/contracts"
+  contracts_build_directory: "./app/src/contracts"
 }
