@@ -11,7 +11,7 @@ contract TruffleStorage {
   }
 
   // functions
-  function set(string calldata _data) external {
+  function set(string memory _data) public {
     data = _data;
   }
 

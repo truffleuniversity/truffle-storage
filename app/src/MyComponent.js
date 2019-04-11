@@ -1,25 +1,23 @@
 import React from "react";
 import {
   AccountData,
+  ContractData,
   ContractForm,
 } from "drizzle-react-components";
 
 export default ({ accounts }) => (
     <div className="App">
         <div>
-        <h1>Truffle Storage</h1>
-        <p>Store the name of your truffle on-chain.</p>
+            <h1>Truffle Storage</h1>
+            <p>Store the name of your Truffle.</p>
         </div>
-
         <div className="section">
-        <h2>Active Account</h2>
-        <AccountData accountIndex="0" units="ether" precision="3" />
-        </div>
-
-        <div className="section">
-        <p>
-        {/* <ContractForm contract="TruffleStorage" method="get" /> */}
-        </p>
+            <p>
+                Current Name: <ContractData contract="TruffleStorage" method="get" />
+            </p>
+            <p>
+                <ContractForm contract="TruffleStorage" method="set" />
+            </p>
         </div>
     </div>
 );  

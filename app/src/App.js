@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { DrizzleProvider } from 'drizzle-react';
+import { LoadingContainer } from "drizzle-react-components";
+
 import drizzleOptions from './drizzleOptions';
+import Header from "./Header";
 import MyContainer from "./MyContainer";
 
 
@@ -12,11 +14,12 @@ class App extends Component {
     return (
       <DrizzleProvider options={drizzleOptions}>
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>Truffle University</p>
+        <Header />
+        <header className="App-header">
+          <LoadingContainer>
             <MyContainer />
-          </header>
+          </LoadingContainer>
+        </header>
         </div>
       </DrizzleProvider>
     );
